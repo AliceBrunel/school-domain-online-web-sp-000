@@ -24,8 +24,8 @@ class School
     @roster.each do |hash|
       puts hash
       binding.pry
-      if hash == grade
-        @roster << name
+      if 
+        @roster.has(key)?
       else
         @roster[grade] = {}
       end
