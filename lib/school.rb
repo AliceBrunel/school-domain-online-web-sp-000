@@ -26,6 +26,7 @@ class School
       binding.pry
       if 
         @roster.has?(key)
+        @roster[key] << 
       else
         @roster[grade] = {}
       end
