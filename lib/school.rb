@@ -1,5 +1,3 @@
-require 'pry'
-
 class School
   attr_accessor :name, :roster
   attr_reader :grade
@@ -20,23 +18,24 @@ class School
   def add_student(name,grade)
     @roster = roster
     @grade = grade
-    @name = name
 
       if 
+        #the has_key? method ask if the hash has the passed key
         @roster.has_key?(@grade)
-        @roster[@grade] << @name
+        @roster[@grade] << name
       else
-        @roster[@grade] = [@name]
+        @roster[@grade] = [name]
       end
+    
   end
-  
+   
   def grade(grade)
     @roster[grade]
   end
   
   def sort 
-    @roster.sort[@grade.sort]
+    @roster.sort
+    @roster.each {|key,value| @roster[key] = value.sort}
   end
   
 end
-  
