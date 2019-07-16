@@ -21,14 +21,12 @@ class School
     @roster = roster
     @grade = grade
     @name = name
-    @roster.each do |hash|
-      puts hash
-      binding.pry
+    
       if 
-        @roster.has?(key)
-        @roster[key] << 
+        @roster.has?(grade)
+        @roster[grade] << name
       else
-        @roster[grade] = {}
+        @roster = {grade => name}
       end
     end
   end
