@@ -25,7 +25,7 @@ class School
       puts hash
       binding.pry
       if 
-        @roster.has(key)?
+        @roster.has?(key)
       else
         @roster[grade] = {}
       end
