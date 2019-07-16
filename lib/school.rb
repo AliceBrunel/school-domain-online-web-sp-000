@@ -17,19 +17,22 @@ class School
     @roster
   end
   
+  
   def add_student(name,grade)
     @roster = roster
     @grade = grade
     @name = name
-    
+
       if 
-        @roster.has?(grade)
-        @roster[grade] << name
+        @roster.has_key?(@grade)
+        @roster[@grade] << @name
       else
-        @roster = {grade => name}
+        @roster[@grade] = [@name]
       end
-    end
+    
   end
   
+  
+end
   
 end
